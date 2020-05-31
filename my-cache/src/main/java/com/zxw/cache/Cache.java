@@ -10,6 +10,13 @@ import java.util.concurrent.Callable;
  */
 public interface Cache<K, V> {
     /**
+     * 返回此缓存的名字
+     *
+     * @return
+     */
+    String getName();
+
+    /**
      * 获取对应的Value
      *
      * @param Key
@@ -55,12 +62,14 @@ public interface Cache<K, V> {
 
     /**
      * 返回entries的数量
+     *
      * @return
      */
     long size();
 
     /**
      * 如果该值尚未有关联,则该值尚未设置
+     *
      * @param key
      * @param val
      * @return
